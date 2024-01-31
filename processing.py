@@ -1,4 +1,4 @@
-    import sys
+import sys
 import numpy as np
 import gzip
 import scipy.sparse as sp
