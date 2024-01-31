@@ -5,7 +5,7 @@ import os
 import torch
 import numpy as np
 from utils import load_data
-from models_LT3 import MONSTOR
+from models import MONSTOR
 import dgl
 import time
 import tqdm
