@@ -13,7 +13,6 @@ import dgl.function as fn
 import pdb
 
 torch.set_num_threads(4)
-graph_names = ['Extended', 'Celebrity', 'WannaCry']
 
 def block_partition(matrix, block_size):
     rows, cols = matrix.shape
