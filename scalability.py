@@ -4,7 +4,7 @@ import os
 
 import torch
 import numpy as np
-from models_LT3 import MONSTOR
+from models import MONSTOR
 import dgl
 import time
 from scipy.stats import spearmanr, pearsonr
