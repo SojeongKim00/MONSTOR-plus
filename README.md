@@ -21,7 +21,7 @@ We used three real-world social networks: Extended, WannaCry, and Celebrity unde
 |Celebrity|15,184|56,538|
 
 ## Generating train data
-We generate and preprocess the train data with repeated monte carlo simulation under the IC and LT models.
+We generate and preprocess the train data with repeated Monte Carlo simulation under the IC and LT models.
 ```
 ./compile.sh
 ./monte_carlo_[IC|LT]_[random|degree] graphs/[Extended|Celebrity|WannaCry]_[train|test]_[BT|JI|LP].txt
@@ -31,7 +31,7 @@ python processing.py [Extended|Celebrity|WannaCry]_[train|test]_[BT|JI|LP]
 ```
 
 ## Training
-In training, we train the model using two of the three networks for inductive setting. "--target" means the masking networks. For example, if target is 'Extended', train the model with rest of two networks('Celebrity' and 'WannaCry').
+In training, we train the model using two of the three networks for inductive setting. "--target" means the masking networks. For example, if the target is 'Extended', train the model with the rest of the two networks('Celebrity' and 'WannaCry').
 ```
 python train.py --target=[Extended|Celebrity|WannaCry] --input-dim=4 --hidden-dim=32 --gpu=0 --layer-num=3 --epochs=100
 ```
