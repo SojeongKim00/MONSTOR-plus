@@ -3,6 +3,12 @@ This is the source code of **MONSTOR+**, *an extended version of the inductive m
 MONSTOR is the first inductive method for estimating the influence of given nodes by replacing repeated MC simulations, however, it only can be used under the IC model.
 Therefore, we propose MONSTOR+ to extend MONSTOR in 2 aspects: **improving performance and being applicable under two diffusion models**, the IC and LT models.
 
+**two contributions:**
+
+**ablation study:**
+
+**IE.py RMSE (total, each both of them are included)**
+
 These codes are based on the code of MONSTOR, and its github link is as below:
 <https://github.com/jihoonko/asonam20-monstor>
 
@@ -25,12 +31,12 @@ python processing.py [Extended|Celebrity|WannaCry]_[train|test]_[BT|JI|LP]
 ```
 
 ## Training
-In training, we train the model using two out of the three networks for inductive setting. "--target" means the masking networks. For example, if target is 'Extended', train the model with rest of two networks('Celebrity' and 'WannaCry').
+In training, we train the model using two of the three networks for inductive setting. "--target" means the masking networks. For example, if target is 'Extended', train the model with rest of two networks('Celebrity' and 'WannaCry').
 ```
 python train.py --target=[Extended|Celebrity|WannaCry] --input-dim=4 --hidden-dim=32 --gpu=0 --layer-num=3 --epochs=100
 ```
 ## Experiment
-__IE.py__ : How accurately does MONSTOR+ estimate the influence of seed sets and effective are our main ideas that we proposed? (Influence Estimation)
+__IE.py__ : How accurately does MONSTOR+ estimate the influence of seed sets and how effective are our main ideas that we proposed? (Influence Estimation)
 
 __submodularity.py__ : Is MONSTOR+ submoudular as the ground-truth influence function is?
 
@@ -41,7 +47,7 @@ __scalability.py__ : How rapidly does the estimation time grow as the size of th
 ```
 python [IE|IM|submodularity].py --input-dim=4 --hidden-dim=32 --layer-num=3 --gpu=0 --checkpoint-path=[path_of_target_checkpoint] --prob=[BT|JI|LP] --n-stacks=[number_of_stacks]
 ```
-Before show the scalability, we obtain the cycle information as an augmented node feature with MATLAB first.
+Before showing the scalability, we obtain the cycle information as an augmented node feature with MATLAB.
 ```
 ~ MATLAB code ~
 python scalability.py --graph-path=graphs/scal_[20|21|22|23|24|].txt --input-dim=4 --hidden-dim=16 --gpu=0 --layer-num=3 --checkpoint-path=[path_of_target_checkpoint]
