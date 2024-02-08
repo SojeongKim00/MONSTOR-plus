@@ -1,13 +1,7 @@
 # Inductive Influence Estimation and Maximization over Unseen Social Networks under Two Diffusion Models
 This is the source code of **MONSTOR+**, *an extended version of the inductive machine learning method, MONSTOR(Ko et al., 2020)* for estimating the influence of given seed nodes in social networks with GNN.
-MONSTOR is the first inductive method for estimating the influence of given nodes by replacing repeated MC simulations, however, it only can be used under the IC model.
-Therefore, we propose MONSTOR+ to extend MONSTOR in 2 aspects: **improving performance and being applicable under two diffusion models**, the IC and LT models.
-
-**two contributions:**
-
-**ablation study:**
-
-**IE.py RMSE (total, each both of them are included)**
+MONSTOR is the first inductive method for estimating the influence of given nodes by replacing repeated MC simulations, however, it only can be used under the IC model. 
+Therefore, we propose MONSTOR+ to extend MONSTOR in 2 aspects: **improving performance and being applicable under two diffusion models**, the IC and LT models. MONSTOR+ contains 2 main contributions : (a) the augmented node feature and (b) advanced aggregator.
 
 **requirements**
 
@@ -38,7 +32,7 @@ In training, we train the model using two of the three networks for inductive se
 python train.py --target=[Extended|Celebrity|WannaCry] --input-dim=4 --hidden-dim=32 --gpu=0 --layer-num=3 --epochs=100
 ```
 ## Experiment
-__IE.py__ : How accurately does MONSTOR+ estimate the influence of seed sets and how effective are our main ideas that we proposed? (Influence Estimation)
+__IE.py__ : How accurately does MONSTOR+ estimate the influence of seed sets? (Influence Estimation) 
 
 __submodularity.py__ : Is MONSTOR+ submoudular as the ground-truth influence function is?
 
