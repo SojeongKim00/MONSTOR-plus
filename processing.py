@@ -48,7 +48,7 @@ if __name__ == '__main__':
     if dataset_name[1] not in ['train', 'test']:
         print("Assertion failed: input should be train or test")
         sys.exit(1)
-    if dataset_name[2] not in ['LT']:
+    if dataset_name[2] not in ['BT', 'JI', 'LP', 'LT']:
         print("Assertion failed: invalid activation probability")
         sys.exit(1)
     
