@@ -43,9 +43,8 @@ __scalability.py__ : How rapidly does the estimation time grow as the size of th
 ```
 python [IE|IM|submodularity].py --input-dim=4 --hidden-dim=32 --layer-num=3 --gpu=0 --checkpoint-path=[path_of_target_checkpoint] --prob=[BT|JI|LP] --n-stacks=[number_of_stacks]
 ```
-Before showing the scalability, we obtain the cycle information as an augmented node feature with MATLAB.
+Before showing the scalability, we obtain the cycle information as an augmented node feature with MATLAB (aug_feat.m).
 ```
-~ MATLAB code ~
 python scalability.py --graph-path=graphs/scal_[20|21|22|23|24|].txt --input-dim=4 --hidden-dim=16 --gpu=0 --layer-num=3 --checkpoint-path=[path_of_target_checkpoint]
 ```
 
