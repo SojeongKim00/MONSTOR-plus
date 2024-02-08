@@ -3,7 +3,8 @@ This is the source code of MONSTOR+, an extended version of the inductive machin
 MONSTOR is the first inductive method for estimating the influence of given nodes by replacing repeated MC simulations, however, it only can be used under the IC model.
 Therefore, we propose MONSTOR+ to extend MONSTOR in 2 aspects: improving performance and being applicable under two diffusion models, the IC and LT models.
 
-MONSTOR github link : <https://github.com/jihoonko/asonam20-monstor>
+These codes are based on the code of MONSTOR, and its github link is as below:
+<https://github.com/jihoonko/asonam20-monstor>
 
 ## Dataset (Graphs)
 We used three real-world social networks: Extended, WannaCry, and Celebrity under the LT model and IC model with three activation probabilities BT, JI, and LP.
