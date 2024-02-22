@@ -9,7 +9,7 @@ These codes are based on the code of MONSTOR, and its github link is as below:
 <https://github.com/jihoonko/asonam20-monstor>
 
 ## Dataset (Graphs)
-We used three real-world social networks: Extended, WannaCry, and Celebrity under the LT model and IC model with three activation probabilities BT, JI, and LP.
+We used three real-world social networks: Extended, WannaCry, and Celebrity under the IC model with three activation probabilities BT, JI, and LP and the LT model.
 | | \|V\| | \|E\| |
 |------|---|---|
 |Extended|11,409|58,972|
