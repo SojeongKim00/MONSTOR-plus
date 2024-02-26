@@ -49,5 +49,5 @@ python scalability.py --graph-path=graphs/scal_[20|21|22|23|24|].txt --input-dim
 ## The average influence of repeated MC simulations
 ```
 ./compile.sh
-./test [path_of_target_graph] [path_of_seeds]
+./test_[IC|LT] [path_of_target_graph] [path_of_seeds]
 ```
