@@ -45,7 +45,7 @@ __submodularity.py__ : Is MONSTOR+ submoudular as the ground-truth influence fun
 __scalability.py__ : How rapidly does the estimation time grow as the size of the input graph increase?
 
 ```
-python [IE|IM|submodularity].py --input-dim=4 --hidden-dim=32 --layer-num=3 --gpu=0 --checkpoint-path=[path_of_target_checkpoint] --prob=[BT|JI|LP] --n-stacks=[number_of_stacks]
+python [IE|IM|submodularity].py --input-dim=4 --hidden-dim=32 --layer-num=3 --gpu=0 --checkpoint-path=[path_of_target_checkpoint] --prob=[BT|JI|LP|LT] --n-stacks=[number_of_stacks]
 ```
 For showing the scalability, we use the local cycle counts as auxiliary node features with MATLAB (aug_feat.m).
 
