@@ -25,6 +25,7 @@ In training, we train the model using two of the three networks for inductive se
 python train.py --target=[Extended|Celebrity|WannaCry] --input-dim=4 --hidden-dim=32 --gpu=0 --layer-num=3 --epochs=100
 ```
 ## Experiment
+All the details are in our paper.
 __IE.py__ : How accurately does MONSTOR+ estimate the influence of seed sets? (Influence Estimation) 
 
 __IM.py__ : How accurate are simulation-based IM algorithms equipped with MONSTOR+, compared to state-of-the-art competitors? (Influence Maximization)
@@ -36,7 +37,8 @@ __scalability.py__ : How rapidly does the estimation time grow as the size of th
 ```
 python [IE|IM|submodularity].py --input-dim=4 --hidden-dim=32 --layer-num=3 --gpu=0 --checkpoint-path=[path_of_target_checkpoint] --prob=[BT|JI|LP] --n-stacks=[number_of_stacks]
 ```
-Before showing the scalability, we obtain the cycle information as an augmented node feature with MATLAB (aug_feat.m).
+For showing the scalability, we use the local cycle counts as auxiliary node features with MATLAB (aug_feat.m).
+
 ```
 python scalability.py --graph-path=graphs/scal_[20|21|22|23|24|].txt --input-dim=4 --hidden-dim=16 --gpu=0 --layer-num=3 --checkpoint-path=[path_of_target_checkpoint]
 ```
