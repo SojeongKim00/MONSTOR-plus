@@ -16,7 +16,7 @@ We generate and preprocess the train data with repeated Monte Carlo simulation u
 ./monte_carlo_[IC|LT]_[random|degree] graphs/[Extended|Celebrity|WannaCry]_[train|test]_[BT|JI|LP].txt
 ```
 ```
-python processing.py [Extended|Celebrity|WannaCry]_[train|test]_[BT|JI|LP]
+python processing.py [Extended|Celebrity|WannaCry]_[train|test]_[BT|JI|LP|LT]
 ```
 
 ## Training
