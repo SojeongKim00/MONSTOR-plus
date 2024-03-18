@@ -1,11 +1,5 @@
 # Inductive Influence Estimation and Maximization over Unseen Social Networks under Two Diffusion Models
-This is the source code of **MONSTOR+**, *an extended version of the inductive machine learning method, MONSTOR(Ko et al., 2020)* for estimating the influence of given seed nodes in social networks with GNN.
-MONSTOR is the first inductive method for estimating the influence of given nodes by replacing repeated MC simulations, however, it only can be used under the IC model.
-While MONSTOR is tailored for the IC model, MONSTOR+ can be applied to both the IC and LT models. 
-MONSTOR+ enhances MONSTOR by incorporating auxiliary structural node features and an advanced pooling function, and they lead to improvements in accuracy.
-
-These codes are based on the code of MONSTOR, and its github link is as below:
-<https://github.com/jihoonko/asonam20-monstor>
+This is the source code of **MONSTOR+**, *an extended version of the inductive machine learning method, MONSTOR(Ko et al., 2020)*. The preliminary version, MONSTOR, is the first inductive method for estimating the influence of given nodes in social networks with GNN by replacing repeated MC simulations under the IC model. We present the extended version of MONSTOR, MONSTOR+, which enhances MONSTOR by incorporating auxiliary structural node features and an advanced pooling function. Both enhancements lead to improvements in accuracy. Furthermore, while MONSTOR is tailored for the IC model, MONSTOR+ is applied to both the IC and LT models.
 
 ## Dataset (Graphs)
 We used three real-world social networks: Extended, WannaCry, and Celebrity under the IC model with three activation probabilities BT, JI, and LP and the LT model.
