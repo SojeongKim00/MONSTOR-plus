@@ -44,7 +44,7 @@ For showing the scalability, we use the local cycle counts as auxiliary node fea
 python scalability.py --graph-path=graphs/scal_[20|21|22|23|24|].txt --input-dim=4 --hidden-dim=16 --gpu=0 --layer-num=3 --checkpoint-path=[path_of_target_checkpoint]
 ```
 
-## The average influence of repeated MC simulations
+## The average influence of MC simulations
 ```
 ./compile.sh
 ./test_[IC|LT] [path_of_target_graph] [path_of_seeds]
