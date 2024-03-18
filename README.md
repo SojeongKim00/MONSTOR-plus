@@ -26,6 +26,7 @@ python train.py --target=[Extended|Celebrity|WannaCry] --input-dim=4 --hidden-di
 ```
 ## Experiment
 All the details are in our paper.
+
 __IE.py__ : How accurately does MONSTOR+ estimate the influence of seed sets? (Influence Estimation) 
 
 __IM.py__ : How accurate are simulation-based IM algorithms equipped with MONSTOR+, compared to state-of-the-art competitors? (Influence Maximization)
