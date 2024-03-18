@@ -21,9 +21,13 @@ python processing.py [Extended|Celebrity|WannaCry]_[train|test]_[BT|JI|LP]
 
 ## Training
 In training, we train the model using two of the three networks for inductive setting, resulting in three scenarios:
-• E+W: Training using Extended and WannaCry; and test using Celebrity,
-• E+C: Training using Extended and Celebrity; and test using WannaCry,
-• W+C: Training using WannaCry and Celebrity; and test using Extended.
+
+  • E+W: Training using Extended and WannaCry; and test using Celebrity,
+  
+  • E+C: Training using Extended and Celebrity; and test using WannaCry,
+  
+  • W+C: Training using WannaCry and Celebrity; and test using Extended.
+  
 "--target" means the masking networks. For example, if the target is 'Extended', train the model with the rest of the two networks('Celebrity' and 'WannaCry').
 
 ```
