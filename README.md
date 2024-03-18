@@ -13,7 +13,7 @@ We used three real-world social networks: Extended, WannaCry, and Celebrity unde
 We generate and preprocess the train data with repeated Monte Carlo simulation under the IC and LT models.
 ```
 ./compile.sh
-./monte_carlo_[IC|LT]_[random|degree] graphs/[Extended|Celebrity|WannaCry]_[train|test]_[BT|JI|LP].txt
+./monte_carlo_[IC|LT]_[random|degree] graphs/[Extended|Celebrity|WannaCry]_[train|test]_[BT|JI|LP|LT].txt
 ```
 ```
 python processing.py [Extended|Celebrity|WannaCry]_[train|test]_[BT|JI|LP|LT]
