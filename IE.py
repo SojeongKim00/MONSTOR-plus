@@ -99,13 +99,10 @@ def IE():
             MAPE = torch.sum(torch.abs(torch.tensor(gt)-torch.tensor(preds))/torch.tensor(gt))/len(gt)
             print("for target graph {} | MAPE : {}".format(tl[0], MAPE))
 
-            # Compute RMSE and MAE for each infection probability
+            # Compute RMSE for each infection probability
             RMSE = (torch.sum((torch.tensor(ground_t)-torch.tensor(preds_each))**2/len(ground_t)))**0.5
             print("for target graph {} | RMSE of each influences: {}".format(tl[0], RMSE))
-            
-            MAE = torch.sum(torch.abs(torch.tensor(ground_t)-torch.tensor(preds_each)))/len(ground_t)
-            print("for target graph {} | MAE of each influences: {}".format(tl[0], MAE))
-            
+         
             
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
