@@ -9,6 +9,12 @@ We used three real-world social networks: Extended, WannaCry, and Celebrity unde
 |WannaCry|35,627|169,419|
 |Celebrity|15,184|56,538|
 
+## Requirements
+To install requirements, run the following command on your terminal:
+```
+pip install -r requirements.txt
+```
+
 ## Generating train data
 We generate and preprocess the train data with repeated Monte Carlo simulation under the IC and LT models.
 ```
