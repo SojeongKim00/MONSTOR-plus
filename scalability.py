@@ -13,34 +13,6 @@ import dgl.function as fn
 import pdb
 
 torch.set_num_threads(4)
-
-def block_partition(matrix, block_size):
-    rows, cols = matrix.shape
-    row_blocks = rows // block_size
-    rr = torch.zeros((10,rows))
-    total_elapsed_time_cycle = 0.
-
-    for i in range(row_blocks+1):
-        if (i + 1) * block_size > rows:
-            block = matrix[i * block_size:, :]
-        else:
-            block = matrix[i * block_size: (i + 1) * block_size, :]
-
-        start1 = time.perf_counter()
-        for j in range(10):
-            
-            block = block@matrix
-            if i*block_size > rows:
-                rr[j,i*block_size:] = torch.from_numpy(np.float32(cp.asnumpy(block.diagonal(i * block_size))))
-            else:
-                rr[j,i*block_size:(i+1)*block_size] = torch.from_numpy(np.float32(cp.asnumpy(block.diagonal(i * block_size))))
-        end1 = time.perf_counter()
-
-        del block
-        total_elapsed_time_cycle += (end1-start1)
-    return rr.cuda()
-
-
 def evaluation():
     # use only single GPU
     os.environ["CUDA_VISIBLE_DEVICES"] = str(args.gpu)
