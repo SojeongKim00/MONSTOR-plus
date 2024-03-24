@@ -26,7 +26,7 @@ python processing.py [Extended|Celebrity|WannaCry]_[train|test]_[BT|JI|LP|LT]
 ```
 
 ## Training
-In training, we train the model using two of the three networks for inductive setting, resulting in three scenarios:
+In training, we train the model using two of the three networks for inductive setting and tested it with the remaining one, resulting in three scenarios:
 
   • E+W: Training using Extended and WannaCry; and test using Celebrity,
   
