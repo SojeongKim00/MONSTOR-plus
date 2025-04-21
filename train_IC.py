@@ -16,7 +16,7 @@ from tqdm import tqdm
 
 torch.set_num_threads(1)
 graph_names = ['Extended', 'Celebrity', 'WannaCry']
-prob_names = ['BT', 'JI', 'LP', 'LT']
+prob_names = ['BT', 'JI', 'LP']
 
 # def loss_fn(preds, gt): return torch.mean(torch.abs(gt - preds), dim=1) + (args.lamb * (torch.abs(torch.sum(gt, dim=1) - torch.sum(preds, dim=1)) / torch.sum(gt, dim=1)))
 def loss_fn(preds, gt): return torch.mean((gt - preds) ** 2, dim=1)
